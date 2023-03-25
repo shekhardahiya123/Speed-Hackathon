@@ -49,7 +49,7 @@ export class LoginPageComponent implements OnInit {
     //         })
     //       );
     //       this.api.sendUserData(this.userData?.userName);
-    //       this.router.navigate(['groups']);
+          this.router.navigate(['home']);
     //     } else {
     //     }
     //   },
