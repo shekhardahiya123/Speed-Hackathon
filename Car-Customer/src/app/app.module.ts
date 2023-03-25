@@ -7,9 +7,14 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialAppModule } from '../material.module';
+import { HomePageComponent } from './home-page/home-page.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ScheduleTripComponent } from './schedule-trip/schedule-trip.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginPageComponent],
+  declarations: [AppComponent, LoginPageComponent, HomePageComponent, HeaderComponent, FooterComponent, ScheduleTripComponent, SidebarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
