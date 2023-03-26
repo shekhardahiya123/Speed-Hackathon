@@ -33,3 +33,11 @@
 a {
   text-decoration: none;
 }
+
+.home-logo {
+  width: 60%;
+}
+
+.login-container {
+  margin: 5em 10em;
+}

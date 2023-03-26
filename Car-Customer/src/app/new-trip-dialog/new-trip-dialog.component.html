@@ -61,7 +61,7 @@
       color="primary"
       [mat-dialog-close]="data.city"
       cdkFocusInitial
-      routerLink="/trip"
+      (click)="saveTrip()"
     >
       Submit
     </button>

@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
@@ -28,6 +29,7 @@ export class NewTripDialogComponent implements OnInit {
   });
 
   constructor(
+    public router: Router,
     public dialogRef: MatDialogRef<NewTripDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) {}
@@ -49,5 +51,9 @@ export class NewTripDialogComponent implements OnInit {
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  saveTrip(): void {
+    this.router.navigate(['trip']);
   }
 }
