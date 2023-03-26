@@ -31,7 +31,7 @@
     </p>
     <p>
       <mat-form-field class="example-form-field" appearance="fill">
-        <mat-label>First campaign</mat-label>
+        <mat-label>Trip Dates</mat-label>
         <mat-date-range-input
           [formGroup]="campaignOne"
           [rangePicker]="campaignOnePicker"
@@ -45,36 +45,11 @@
           />
           <input matEndDate placeholder="End date" formControlName="end" />
         </mat-date-range-input>
-        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle
           matIconSuffix
           [for]="campaignOnePicker"
         ></mat-datepicker-toggle>
         <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field class="example-form-field" appearance="fill">
-        <mat-label>Second campaign</mat-label>
-        <mat-date-range-input
-          [formGroup]="campaignTwo"
-          [rangePicker]="campaignTwoPicker"
-          [comparisonStart]="campaignOne.value.start"
-          [comparisonEnd]="campaignOne.value.end"
-        >
-          <input
-            matStartDate
-            placeholder="Start date"
-            formControlName="start"
-          />
-          <input matEndDate placeholder="End date" formControlName="end" />
-        </mat-date-range-input>
-        <mat-datepicker-toggle
-          matIconSuffix
-          [for]="campaignTwoPicker"
-        ></mat-datepicker-toggle>
-        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-        <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>
       </mat-form-field>
     </p>
   </form>
@@ -86,6 +61,7 @@
       color="primary"
       [mat-dialog-close]="data.city"
       cdkFocusInitial
+      routerLink="/trip"
     >
       Submit
     </button>
