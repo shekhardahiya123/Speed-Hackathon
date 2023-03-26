@@ -11,6 +11,7 @@
   margin-bottom: 10px;
   height: 150px;
   background-color: white;
+  color: #3f51b5;
 }
 
 .card:hover {
@@ -32,9 +33,7 @@ a {
   max-width: 100%;
   height: 500px;
 }
-.marginLeft {
-  margin-left: 0px;
-}
+
 .insideCard2 {
   font-weight: 100;
   padding-top: 5px;

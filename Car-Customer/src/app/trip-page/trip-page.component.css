@@ -28,3 +28,15 @@
   padding-left: 10px;
   color: blue;
 }
+
+.chargeIcon {
+  padding-left: 10px;
+  color: green;
+}
+.hospitalIcon {
+  padding-left: 10px;
+  color: red;
+}
+.reward {
+  border-radius: 5%;
+}
