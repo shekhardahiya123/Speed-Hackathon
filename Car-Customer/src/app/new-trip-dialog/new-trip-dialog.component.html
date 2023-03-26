@@ -45,16 +45,17 @@
           />
           <input matEndDate placeholder="End date" formControlName="end" />
         </mat-date-range-input>
-        <mat-datepicker-toggle
-          matIconSuffix
-          [for]="campaignOnePicker"
-        ></mat-datepicker-toggle>
+
         <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
       </mat-form-field>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="campaignOnePicker"
+      ></mat-datepicker-toggle>
     </p>
   </form>
 
-  <div mat-dialog-actions>
+  <div mat-dialog-actions style="float: right">
     <button mat-button (click)="onNoClick()">Cancel</button>
     <button
       mat-raised-button
