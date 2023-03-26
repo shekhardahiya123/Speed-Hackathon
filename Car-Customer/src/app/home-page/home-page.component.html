@@ -1,15 +1,16 @@
 <br>
 <br>
-<div class="container">
+<div class="container marginLeft ">
     <div class="row">
+
         <div class="col-md-3 offset-1 ">
             <div>
-                <a routerLink="/login">
+                <a routerLink="/trip">
                     <div class="card cardBack">
                         <div class="card-body noUnderline">
                             <div class="row">
                                 <div class="col-md-8">
-                                    Plan a Trip
+                                    Schedule a Trip
                                 </div>
                                 <div class="col-md-4">
                                     <i class="fa-solid fa-car fa-lg"></i>
@@ -27,10 +28,9 @@
                         <div class="card-body noUnderline">
                             <div class="row">
                                 <div class="col-md-8">
-                                    Trips History
-                                </div>
+                                    Locate an EV Charger </div>
                                 <div class="col-md-4">
-                                    <i class="fa-sharp fa-solid fa-clock-rotate-left fa-lg"></i>
+                                    <i class="fa-solid fa-charging-station fa-lg"></i>
                                 </div>
                             </div>
                         </div>
@@ -74,6 +74,7 @@
                 </a>
             </div>
         </div>
+
         <div class="col-md-3 offset-1">
             <div>
                 <a routerLink="/login">
@@ -81,10 +82,10 @@
                         <div class="card-body noUnderline">
                             <div class="row">
                                 <div class="col-md-8">
-                                    EV charging Stations
+                                    Trips History
                                 </div>
                                 <div class="col-md-4">
-                                    <i class="fa-solid fa-charging-station fa-lg"></i>
+                                    <i class="fa-sharp fa-solid fa-clock-rotate-left fa-lg"></i>
                                 </div>
                             </div>
                         </div>
@@ -110,5 +111,39 @@
                 </a>
             </div>
         </div>
+    </div>
+</div>
+<br><br>
+<div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../assets/Insurance.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/car_wash.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/Insurance.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>

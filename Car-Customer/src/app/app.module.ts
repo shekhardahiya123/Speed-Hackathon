@@ -12,9 +12,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScheduleTripComponent } from './schedule-trip/schedule-trip.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { TripPageComponent } from './trip-page/trip-page.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginPageComponent, HomePageComponent, HeaderComponent, FooterComponent, ScheduleTripComponent, SidebarComponent],
+  declarations: [AppComponent, LoginPageComponent, HomePageComponent, HeaderComponent, FooterComponent, ScheduleTripComponent, SidebarComponent, TripPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
