@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navColor">
     <div class="container-fluid" style="margin-left: 150px">
         <img class="navImage" src="../../assets/header_logo.png"
-            style="height: 40px; position: absolute; left: 10px; top: 5px" alt="" />
+            style="height: 55px; position: absolute; left: 10px; top: 5px" alt="" />
         <!-- <a class="navbar-brand brand" href="">LifeOnWheels</a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,14 +20,21 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item" *ngIf="loggedInUser">
-                    <a class="nav-link active text-capitalize">Hi, {{ loggedInUser }} </a>
-                </li>
-                <li class="nav-item" *ngIf="loggedInUser">
+                <li class="nav-item User" *ngIf="!loggedInUser">
                     <a class="nav-link active" [routerLink]="['/logout']" (click)="logOut()">
-                        Logout
+                        Helen
                     </a>
                 </li>
+                <li class="nav-item rightNavbell">
+                    <button class="btn btn-light"><i class="fa-solid fa-bell"></i></button>
+                </li>
+
+                <li class="nav-item" *ngIf="!loggedInUser">
+                    <a href="#" class=""><img alt="Image"
+                            src="https://demo.bootstrapious.com/directory/1-0/img/avatar/avatar-5.jpg"
+                            class="avatar avatar-lg"></a>
+                </li>
+
             </ul>
         </div>
     </div>

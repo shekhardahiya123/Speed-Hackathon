@@ -9,3 +9,28 @@ g {
   margin-top: 2px;
   margin-left: 2px;
 }
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.rightNavbell {
+  color: white;
+  float: left;
+  position: absolute;
+  right: 130px;
+  top: 15px;
+}
+.btn-light {
+  padding: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.User {
+  position: relative;
+  top: 4px;
+}
+a {
+  font-size: large;
+}
