@@ -20,16 +20,16 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item User" *ngIf="!loggedInUser">
+                <li class="nav-item User" *ngIf="loggedInUser">
                     <a class="nav-link active" [routerLink]="['/logout']" (click)="logOut()">
                         Helen
                     </a>
                 </li>
-                <li class="nav-item rightNavbell">
+                <li class="nav-item rightNavbell" *ngIf="loggedInUser">
                     <button class="btn btn-light"><i class="fa-solid fa-bell"></i></button>
                 </li>
 
-                <li class="nav-item" *ngIf="!loggedInUser">
+                <li class="nav-item" *ngIf="loggedInUser">
                     <a href="#" class=""><img alt="Image"
                             src="https://demo.bootstrapious.com/directory/1-0/img/avatar/avatar-5.jpg"
                             class="avatar avatar-lg"></a>

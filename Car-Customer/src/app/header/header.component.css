@@ -1,7 +1,9 @@
 .navColor {
   background-color: #3f51b5;
 }
-
+.navbar {
+  height: 70px;
+}
 g {
   cursor: pointer;
 }

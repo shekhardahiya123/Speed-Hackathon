@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DataProviderService } from '../data-provider.service';
 
 @Component({
   selector: 'app-login-page',
@@ -11,12 +12,17 @@ export class LoginPageComponent implements OnInit {
   userData;
   wrongPassword = false;
   userNotFound = false;
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private api: DataProviderService
+  ) {}
 
   ngOnInit(): void {
     this.initiateLoginForm();
   }
   userLoginForm!: FormGroup;
+
   get form() {
     return this.userLoginForm.controls;
   }
@@ -48,8 +54,8 @@ export class LoginPageComponent implements OnInit {
     //           groupsInvolved: this.userData?.groupsInvolved,
     //         })
     //       );
-    //       this.api.sendUserData(this.userData?.userName);
-          this.router.navigate(['home']);
+    this.api.sendUserData('test');
+    this.router.navigate(['home']);
     //     } else {
     //     }
     //   },
