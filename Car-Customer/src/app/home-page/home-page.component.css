@@ -10,7 +10,7 @@
   float: none;
   margin-bottom: 10px;
   height: 150px;
-  background-color: #f0f8ff;
+  background-color: white;
 }
 
 .card:hover {
@@ -34,4 +34,13 @@ a {
 }
 .marginLeft {
   margin-left: 0px;
+}
+.insideCard {
+  font-weight: 100;
+  padding-top: 10px;
+  color: black;
+  font-size: smaller;
+}
+hr {
+  margin: 5px;
 }
