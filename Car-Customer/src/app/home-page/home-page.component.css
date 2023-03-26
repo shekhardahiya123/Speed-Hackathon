@@ -35,6 +35,12 @@ a {
 .marginLeft {
   margin-left: 0px;
 }
+.insideCard2 {
+  font-weight: 100;
+  padding-top: 5px;
+  color: black;
+  font-size: smaller;
+}
 .insideCard {
   font-weight: 100;
   padding-top: 10px;
