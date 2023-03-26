@@ -1,0 +1,93 @@
+<!-- <h1 mat-dialog-title>Hi {{ data.name }}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.animal" />
+  </mat-form-field>
+</div> -->
+<div class="card-container">
+  <form class="trip-form">
+    <p>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Destination</mat-label>
+        <input
+          type="text"
+          placeholder="Pick one"
+          aria-label="Destination"
+          matInput
+          [formControl]="myControl"
+          [matAutocomplete]="auto"
+        />
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option
+            *ngFor="let option of filteredOptions | async"
+            [value]="option"
+          >
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>First campaign</mat-label>
+        <mat-date-range-input
+          [formGroup]="campaignOne"
+          [rangePicker]="campaignOnePicker"
+          [comparisonStart]="campaignTwo.value.start"
+          [comparisonEnd]="campaignTwo.value.end"
+        >
+          <input
+            matStartDate
+            placeholder="Start date"
+            formControlName="start"
+          />
+          <input matEndDate placeholder="End date" formControlName="end" />
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="campaignOnePicker"
+        ></mat-datepicker-toggle>
+        <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>Second campaign</mat-label>
+        <mat-date-range-input
+          [formGroup]="campaignTwo"
+          [rangePicker]="campaignTwoPicker"
+          [comparisonStart]="campaignOne.value.start"
+          [comparisonEnd]="campaignOne.value.end"
+        >
+          <input
+            matStartDate
+            placeholder="Start date"
+            formControlName="start"
+          />
+          <input matEndDate placeholder="End date" formControlName="end" />
+        </mat-date-range-input>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="campaignTwoPicker"
+        ></mat-datepicker-toggle>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>
+      </mat-form-field>
+    </p>
+  </form>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button
+      mat-raised-button
+      color="primary"
+      [mat-dialog-close]="data.city"
+      cdkFocusInitial
+    >
+      Submit
+    </button>
+  </div>
+</div>
