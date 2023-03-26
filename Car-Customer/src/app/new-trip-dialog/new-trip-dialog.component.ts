@@ -23,12 +23,8 @@ export class NewTripDialogComponent implements OnInit {
   options: string[] = ['Dubai', 'Goa', 'Montreal', 'New York', 'Paris'];
   filteredOptions: Observable<string[]>;
   campaignOne = new FormGroup({
-    start: new FormControl(new Date(year, month, 13)),
-    end: new FormControl(new Date(year, month, 16)),
-  });
-  campaignTwo = new FormGroup({
-    start: new FormControl(new Date(year, month, 15)),
-    end: new FormControl(new Date(year, month, 19)),
+    start: new FormControl(new Date(year, month, 27)),
+    end: new FormControl(new Date(year, month, 29)),
   });
 
   constructor(
